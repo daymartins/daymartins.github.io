@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/dayane.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index,follow">
+    <link href="images/codificacao.png" rel="icon">
+    <link href="images/codificacao.png" rel="shortcut icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <meta name="description"
+          content="Desenvolvedora de software">
+    <title>Dayane Martins</title>
+
+    <script>
+        function animate(elem, style, unit, from, to, time, prop) {
+            if (!elem) {
+                return;
+            }
+            var start = new Date().getTime(),
+                timer = setInterval(function () {
+                    var step = Math.min(1, (new Date().getTime() - start) / time);
+                    if (prop) {
+                        elem[style] = (from + step * (to - from)) + unit;
+                    } else {
+                        elem.style[style] = (from + step * (to - from)) + unit;
+                    }
+                    if (step === 1) {
+                        clearInterval(timer);
+                    }
+                }, 25);
+            if (prop) {
+                elem[style] = from + unit;
+            } else {
+                elem.style[style] = from + unit;
+            }
+        }
+    </script>
+
+    <script>
+        window.onload = function () {
+            var button = document.getElementById('homeRodape');
+            button.addEventListener('click', function (event) {
+                var target = document.getElementById("blockHome");
+                animate(document.scrollingElement || document.documentElement, "scrollTop", "", self.pageYOffset, target.offsetTop - 80, 800, true);
+            });
+
+            var button = document.getElementById('home');
+            button.addEventListener('click', function (event) {
+                var target = document.getElementById("blockHome");
+                animate(document.scrollingElement || document.documentElement, "scrollTop", "", self.pageYOffset, target.offsetTop - 80, 800, true);
+            });
+
+            var button = document.getElementById('about');
+            button.addEventListener('click', function (event) {
+                var target = document.getElementById("blockAbout");
+                animate(document.scrollingElement || document.documentElement, "scrollTop", "", self.pageYOffset, target.offsetTop - 80, 800, true);
+            });
+
+            var button = document.getElementById('contact');
+            button.addEventListener('click', function (event) {
+                var target = document.getElementById("blockHome");
+                animate(document.scrollingElement || document.documentElement, "scrollTop", "", self.pageYOffset, target.offsetTop - 100, 800, true);
+            });
+
+            var button = document.getElementById('faq');
+            button.addEventListener('click', function (event) {
+                var target = document.getElementById("blockFaq");
+                animate(document.scrollingElement || document.documentElement, "scrollTop", "", self.pageYOffset, target.offsetTop - 100, 800, true);
+            });
+
+            var buttonEd = document.getElementById("btnEducationTimeline");
+            var buttonEx = document.getElementById("btnExperienceTimeline");
+            var blockEducation = document.getElementById("educationTimeline");
+            var blockExperience = document.getElementById("experienceTimeline");
+
+            buttonEd.addEventListener('click', function (event) {
+                if (!buttonEd.classList.contains("active")) {
+                    buttonEd.classList.add("active");
+                    buttonEx.classList.remove("active");
+                    blockEducation.classList.remove("hide");
+                    blockExperience.classList.add("hide");
+                }
+            });
+
+            buttonEx.addEventListener('click', function (event) {
+                if (!buttonEx.classList.contains("active")) {
+                    buttonEd.classList.remove("active");
+                    buttonEx.classList.add("active");
+                    blockEducation.classList.add("hide");
+                    blockExperience.classList.remove("hide");
+                }
+            });
+
+            window.onscroll = function () {
+                var menu = document.getElementById('menu');
+                if (document.body.scrollTop >= 80 || document.documentElement.scrollTop >= 80) {
+                    menu.classList.add("scrolled");
+                } else {
+                    menu.classList.remove("scrolled");
+                }
+            };
+        };
+
+
+    </script>
+
+    <script>
+        function showAnswer(parentDiv) {
+            parentDiv.classList.toggle("show");
+        }
+    </script>
+
+    <div class="header" id="menu">
+        <div class="container">
+            <div class="content">
+                <a id="home">
+                    Home
+                </a>
+                <a id="about">
+                    Sobre
+                </a>
+                <a id="contact">
+                    Contato
+                </a>
+                <a id="faq">
+                    FAQ
+                </a>
+            </div>
+        </div>
+    </div>
+</head>
+<body>
+<div class="head-block">
+    <div class="resume-block">
+        <div class="image-block">
+            <img src="images/profile.jpeg" alt="Dayane"/>
+        </div>
+
+        <div class="info-block" id="blockHome">
+            <div class="presentation">
+                <div class="name">
+                    <h1>Dayane Martins</h1>
+                </div>
+                <div class="job">
+                    Desenvolvedora de software
+                </div>
+                <div class="resume">
+                    <p>Mineira, DevGirl, Pós-graduanda em BI/BA</p>
+                </div>
+            </div>
+
+            <div class="another-infos">
+                <div class="item-info">
+                    <img src="images/calendar.png" alt="Data de nascimento"/>
+                    <div class="description">
+                        <span> 4 de Dezembro de 1994</span>
+                    </div>
+                </div>
+
+                <div class="item-info">
+                    <img src="images/email.png" alt="E-mail"/>
+                    <div class="description">
+                        <span>dayanemartins04@gmail.com</span>
+                    </div>
+                </div>
+
+                <div class="item-info">
+                    <img src="images/home.png" alt="Moradia"/>
+                    <div class="description">
+                        <span>Franca - São Paulo - Brasil</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social-medias">
+                <a href="https://www.facebook.com/dayane.martins.7334" target="_blank">
+                    <img src="images/facebook.png" alt="Facebook"/>
+                </a>
+
+                <a href="https://www.instagram.com/daymartins2/" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram"/>
+                </a>
+
+                <a href="https://www.linkedin.com/in/dayane-martins-798742bb/" target="_blank">
+                    <img src="images/linkedin.png" alt="Linkedin"/>
+                </a>
+
+                <a href="https://github.com/daymartins" target="_blank">
+                    <img src="images/github.png" alt="Github"/>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="body-block">
+    <div class="about-myself" id="blockAbout">
+        <div class="title">
+            <h2>Sobre mim</h2>
+        </div>
+        <div class="container">
+
+            <div class="description">
+                <p>
+                    Sou Dayane Martins Teixeira e nasci nas pequena Capitólio - Minas Gerais (04/12/94). Hoje moro no
+                    interior paulista, em Franca.
+                </p>
+                <p>
+                    Desde criança sou apaixonada em tecnologia e sempre gostei de desafios e aprender/praticar coisas
+                    novas.
+                </p>
+                <p>
+                    Sou bacharel em Ciência da Computação (Unifran) e pós-graduanda em Analycts e Business Intelligence
+                    (PUC).
+                </p>
+                <p>
+                    Sou também desenvolvedora de software/promagamadora (desde 2016), atuo e me sinto confortável com o
+                    frontend e backend,
+                    além de desenvolver aplicações mobile através de webviews. Ou seja, sou quase uma fullstack, exceto
+                    pela pouca prática com infraestrutura.
+                </p>
+            </div>
+
+            <div class="gallery">
+                <div>
+                    <img src="images/swear.jpeg" alt="Juramento"/>
+                    <img src="images/terrinha.jpeg" alt="Capitolio-MG"/>
+                    <img src="images/code-girl.jpg" alt="devGirl"/>
+                    <img src="images/graduation.jpg" alt="Colacao de grau"/>
+                    <img src="images/fullstack.jpg" alt="Fullstack"/>
+                    <img src="images/cubo.jpeg" alt="Cubo"/>
+                    <img src="images/cool.jpeg" alt="Joycar"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="timelines-block">
+        <div class="container-base">
+            <div class="buttons-base">
+                <a id="btnEducationTimeline" class="active">
+                    Minha formação
+                </a>
+
+                <a id="btnExperienceTimeline">
+                    Minhas experiências
+                </a>
+            </div>
+
+            <div id="educationTimeline" class="container">
+                <div class="languages">
+                    <div class="title">
+                        Idiomas
+                    </div>
+
+                    <div class="item">
+                        <label>Português</label>
+                        <span>Nativo</span>
+                    </div>
+                    <div class="item">
+                        <label>Inglês</label>
+                        <span>Avançado</span>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <div class="container left">
+                        <div class="content">
+                            <h2>Fevereiro de 2013</h2>
+                            <p>Início da graduação em Ciência da Computação na Unifran através de bolsa integral do
+                                ProUni</p>
+                        </div>
+                    </div>
+                    <div class="container right">
+                        <div class="content">
+                            <h2>Dezembro de 2016</h2>
+                            <p>Conclusão da graduação em Ciência da Computação na Unifran</p>
+                        </div>
+                    </div>
+                    <div class="container left">
+                        <div class="content">
+                            <h2>Março de 2020 (até o presente)</h2>
+                            <p>Início da pós-graduação em Analytics e Business Intelligence na PUC Minas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container hide" id="experienceTimeline">
+                <div class="base">
+                    <div class="title">
+                        Habilidades
+                    </div>
+
+                    <div class="skills">
+                        <div class="item">
+                            <label>
+                                Java
+                            </label>
+                            <div class="bar">
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label>
+                                Hibernate
+                            </label>
+                            <div class="bar">
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label>
+                                Javascript
+                            </label>
+                            <div class="bar">
+                                <div class="progress" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label>
+                                CSS
+                            </label>
+                            <div class="bar">
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label>
+                                HTML
+                            </label>
+                            <div class="bar">
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label>
+                                NodeJS
+                            </label>
+                            <div class="bar">
+                                <div class="progress" style="width: 10%;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label>
+                                Android
+                            </label>
+                            <div class="bar">
+                                <div class="progress" style="width: 25%;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label>
+                                Maven
+                            </label>
+                            <div class="bar">
+                                <div class="progress" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label>
+                                SpringBoot
+                            </label>
+                            <div class="bar">
+                                <div class="progress" style="width: 40%;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label>
+                                GWT
+                            </label>
+                            <div class="bar">
+                                <div class="progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label>
+                                Git
+                            </label>
+                            <div class="bar">
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <label>
+                                Less
+                            </label>
+                            <div class="bar">
+                                <div class="progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label>
+                                Postgres
+                            </label>
+                            <div class="bar">
+                                <div class="progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label>
+                                MySQL
+                            </label>
+                            <div class="bar">
+                                <div class="progress" style="width: 15%;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label>
+                                MongoDB
+                            </label>
+                            <div class="bar">
+                                <div class="progress" style="width: 10%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="title">
+                        Lista de desejos
+                    </div>
+
+                    <ul>
+                        <li>
+                            Habilidade em Javascript
+                        </li>
+                        <li>
+                            Habilidade em React / React native
+                        </li>
+                        <li>
+                            Habilidade em NodeJS
+                        </li>
+                        <li>
+                            Habilidade em TypeScript
+                        </li>
+                        <li>
+                            Certificação em Java
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="timeline">
+                    <div class="container left">
+                        <div class="content">
+                            <h2>Agosto de 2013</h2>
+                            <p>Estágio em desenvolvimento de software na Codebit</p>
+                        </div>
+                    </div>
+                    <div class="container right">
+                        <div class="content">
+                            <h2>Novembro de 2016 (até o presente)</h2>
+                            <p>Desenvolvedora de Software na Joycar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-block" id="blockFaq">
+        <div class="title">
+            <h2>Perguntas Frequentes</h2>
+        </div>
+
+        <div class="container">
+            <div class="item">
+                <a class="question" onclick="showAnswer(this.parentElement)">
+                    Quem é?
+                    <img src="images/seta.png" alt=""/>
+                </a>
+                <div class="answer">
+                    Dayane Martins Teixeira
+                </div>
+            </div>
+
+            <div class="item">
+                <a class="question" onclick="showAnswer(this.parentElement)">
+                    De onde veio?
+                    <img src="images/seta.png" alt=""/>
+                </a>
+                <div class="answer">
+                    Do interior de Minas Gerais, na cidade rainha dos lagos - Capitólio.
+                </div>
+            </div>
+
+            <div class="item">
+                <a class="question" onclick="showAnswer(this.parentElement)">
+                    Onde vive?
+                    <img src="images/seta.png" alt=""/>
+                </a>
+                <div class="answer">
+                    No interior do estado de São Paulo, na cidade das três colinas, capital nacional do
+                    calçado
+                    e do basquete - Franca.
+                </div>
+            </div>
+
+            <div class="item">
+                <a class="question" onclick="showAnswer(this.parentElement)">
+                    O que faz?
+                    <img src="images/seta.png" alt=""/>
+                </a>
+                <div class="answer">
+                    Desenvolvedora de software (web)
+                </div>
+            </div>
+
+            <div class="item">
+                <a class="question" onclick="showAnswer(this.parentElement)">
+                    Porquê carreira de tecnologia?
+                    <img src="images/seta.png" alt=""/>
+                </a>
+                <div class="answer">
+                    Por que desde criança, sou apaixonada por tecnologia e como ela pode melhorar a vida das
+                    pessoas.
+                </div>
+            </div>
+
+            <div class="item">
+                <a class="question" onclick="showAnswer(this.parentElement)">
+                    Um defeito?
+                    <img src="images/seta.png" alt=""/>
+                </a>
+                <div class="answer">
+                    Teimosia.
+                </div>
+            </div>
+
+            <div class="item">
+                <a class="question" onclick="showAnswer(this.parentElement)">
+                    Uma qualidade?
+                    <img src="images/seta.png" alt=""/>
+                </a>
+                <div class="answer">
+                    O mesmo do defeito, só que em uma palavra mais bonita: Persistência.
+                </div>
+            </div>
+
+            <div class="item">
+                <a class="question" onclick="showAnswer(this.parentElement)">
+                    O que gosta de fazer?
+                    <img src="images/seta.png" alt=""/>
+                </a>
+                <div class="answer">
+                    Gosto de assistir filmes e séries, ler, jogar, "brincar" com maquiagem, visitar minha
+                    família e
+                    conhecer novos lugares (especialmente lugares ao ar livre).
+                </div>
+            </div>
+
+            <div class="item">
+                <a class="question" onclick="showAnswer(this.parentElement)">
+                    O que pensa?
+                    <img src="images/seta.png" alt=""/>
+                </a>
+                <div class="answer">
+                    Penso que sempre devemos manter a humildade e mente aberta. Assim, sempre poderemos nos
+                    aprimorar como profissionais e seres humanos.
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer-block">
+    <div class="container">
+        <div class="column">
+            <h3><a id="homeRodape">Home</a></h3>
+        </div>
+        <div class="column">
+            <h3>Contate-me</h3>
+            <div class="contact">
+                <img src="images/email.png" alt=""/>
+                <span>dayanemartins04@gmail.com</span>
+            </div>
+        </div>
+        <div class="column">
+            <h3>Siga-me</h3>
+            <div class="social-medias">
+                <a href="https://www.facebook.com/dayane.martins.7334" target="_blank">
+                    <img src="images/facebook.png" alt="Facebook"/>
+                </a>
+
+                <a href="https://www.instagram.com/daymartins2/" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram"/>
+                </a>
+
+                <a href="https://www.linkedin.com/in/dayane-martins-798742bb/" target="_blank">
+                    <img src="images/linkedin.png" alt="Linkedin"/>
+                </a>
+
+                <a href="https://github.com/daymartins" target="_blank">
+                    <img src="images/github.png" alt="Github"/>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

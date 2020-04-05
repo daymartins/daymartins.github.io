@@ -1,0 +1,720 @@
+html, body {
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    font-size: 17px;
+    display: block;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: #fff;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a,
+a:hover,
+a:visited {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header {
+    position: fixed;
+    background-color: transparent;
+    color: #ffffff;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+}
+
+.header.scrolled {
+    background-color: #2d283e;
+}
+
+.header .container {
+    width: 1024px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: right;
+}
+
+.header .container .logo img {
+    width: 300px;
+}
+
+.header .container .content a {
+    padding: 0 10px;
+    color: #fff;
+    border-bottom: 3px solid transparent;
+}
+
+.header .container .content a:hover {
+    font-weight: bold;
+    border-color: #fff;
+}
+
+.head-block {
+    background-image: linear-gradient(to right, #802bb1, #702fa9, #6031a0, #523197, #44318d);
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 120px 0 70px;
+}
+
+.head-block .resume-block {
+    background-color: #fff;
+    width: 1024px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.head-block .resume-block .image-block {
+    position: relative;
+    text-align: left;
+    margin: 30px;
+}
+
+.head-block .resume-block .image-block img {
+    border-radius: 10px;
+    width: 300px;
+}
+
+.head-block .resume-block .info-block {
+    padding: 50px;
+    text-align: left;
+}
+
+.head-block .resume-block .info-block .presentation .name h1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.head-block .resume-block .info-block .presentation .job {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.head-block .resume-block .info-block .presentation .resume {
+    color: #4c495d;
+    font-size: 17px;
+}
+
+.head-block .resume-block .info-block .another-infos {
+    color: #4c495d;
+    font-size: 16px;
+    padding-top: 5px;
+    padding-bottom: 40px;
+}
+
+.head-block .resume-block .info-block .another-infos .item-info {
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.head-block .resume-block .info-block .another-infos .item-info img {
+    width: 28px;
+    margin-right: 10px;
+}
+
+.head-block .resume-block .info-block .social-medias a img {
+    width: 40px;
+    margin-right: 10px;
+    opacity: 0.9;
+}
+
+.head-block .resume-block .info-block .social-medias a:hover img {
+    opacity: 1;
+}
+
+.body-block {
+    background-color: #fff;
+}
+
+.body-block h2,
+.body-block .title {
+    font-size: 22px;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    color: #44318d;
+}
+
+.body-block .about-myself {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.body-block .about-myself .container {
+    display: flex;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.body-block .about-myself .container .description {
+    color: #4c495d;
+    font-size: 17px;
+    width: 50%;
+}
+
+.body-block .about-myself .container .gallery {
+    width: 50%;
+    text-align: right;
+}
+
+.body-block .about-myself .container .gallery img {
+    margin-left: 5px;
+    margin-top: 5px;
+    width: 110px;
+}
+
+.body-block .timelines-block {
+    background-image: linear-gradient(to right, #802bb1, #702fa9, #6031a0, #523197, #44318d);
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.body-block .timelines-block .container-base {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.body-block .timelines-block .buttons-base {
+    padding: 50px;
+}
+
+.body-block .timelines-block .buttons-base a {
+    padding: 12px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #802bb1;
+    color: #FFF;
+}
+
+.body-block .timelines-block .buttons-base a.active {
+    background-color: #d83f87;
+}
+
+.body-block .timelines-block .container {
+    display: flex;
+}
+
+.body-block .timelines-block .container .title {
+    font-size: 20px;
+    padding: 10px 0;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.body-block .timelines-block .container .languages {
+    width: 35%;
+}
+
+.body-block .timelines-block .container .languages .item {
+    font-size: 17px;
+    color: #FFF;
+    padding: 7px 0;
+}
+
+.body-block .timelines-block .container .languages label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.body-block .timelines-block .container.hide {
+    display: none;
+}
+
+/* The actual timeline (the vertical ruler) */
+.body-block .timelines-block .container .timeline {
+    width: 65%;
+    position: relative;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.body-block .timelines-block .container .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+/* Container around content */
+.body-block .timelines-block .container .timeline .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+}
+
+/* The circles on the timeline */
+.body-block .timelines-block .container .timeline .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #d83f87;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Place the container to the left */
+.body-block .timelines-block .container .timeline .left {
+    left: -80px;
+}
+
+/* Place the container to the right */
+.body-block .timelines-block .container .timeline .right {
+    left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.body-block .timelines-block .container .timeline .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.body-block .timelines-block .container .timeline .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.body-block .timelines-block .container .timeline .right::after {
+    left: -16px;
+}
+
+/* The actual content */
+.body-block .timelines-block .container .timeline .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+}
+
+.body-block .timelines-block .container .timeline .content h2 {
+    padding: 0;
+    font-size: 18px;
+}
+
+.body-block .timelines-block .container .base {
+    width: 35%;
+    margin: 0 auto;
+}
+
+.body-block .timelines-block .skills {
+    padding-bottom: 30px;
+}
+
+.body-block .timelines-block .skills .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.body-block .timelines-block .skills .item label {
+    font-size: 17px;
+    color: #FFF;
+    margin-right: 15px;
+    min-width: 75px;
+    text-align: left;
+}
+
+.body-block .timelines-block .skills .item .bar {
+    width: 100%;
+    height: 18px;
+    position: relative;
+    background: #2a1b3d;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    padding: 7px;
+    box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.3);
+}
+
+.body-block .timelines-block .skills .item .bar > div {
+    display: block;
+    height: 100%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgb(216, 63, 135);
+    box-shadow: inset 0 2px 9px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 6px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.body-block .timelines-block .base ul {
+    font-size: 17px;
+    color: #FFF;
+    text-align: left;
+}
+
+.body-block .faq-block {
+    text-align: left;
+    padding-bottom: 80px;
+}
+
+.body-block .faq-block .title {
+    padding-bottom: 30px;
+}
+
+.body-block .faq-block .container {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.body-block .faq-block .container .item {
+    /*background-image: linear-gradient(to right, #802bb1, #702fa9, #6031a0, #523197, #44318d);*/
+    background-color: #6031a0;
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px;
+    /*width: 100%;*/
+    margin: 10px;
+    font-size: 17px;
+}
+
+.body-block .faq-block .container .item .question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.body-block .faq-block .container .item .question img {
+    width: 20px;
+    transition: transform ease-in-out 300ms;
+    -webkit-transition: transform ease-in-out 300ms;
+    -moz-transition: transform ease-in-out 300ms;
+    -o-transition: transform ease-in-out 300ms;
+    -ms-transition: transform ease-in-out 300ms;
+}
+
+.body-block .faq-block .container .item.show .question img {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+}
+
+.body-block .faq-block .container .item .answer {
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    padding-top: 10px;
+    display: none;
+    transition: all .3s ease-in-out;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+}
+
+.body-block .faq-block .container .item.show .answer {
+    display: block;
+}
+
+.footer-block {
+    background-color: #2d283e;
+    padding: 50px 0;
+    color: #fff;
+    font-size: 15px;
+}
+
+.footer-block .container {
+    width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+.footer-block .container .column {
+    width: 290px;
+    color: #fff;
+    margin: 0 10px;
+}
+
+.footer-block .container .column h3 {
+    color: #fff;
+    margin: 10px 0;
+}
+
+.footer-block .container .column img {
+    width: 28px;
+    margin-right: 10px;
+    filter: brightness(0) invert(1);
+}
+
+.footer-block .container .column .contact {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-block .container .column .social-medias img {
+    padding-right: 10px;
+    width: 40px;
+    filter: brightness(0) invert(1);
+}
+
+@media (max-width: 1279px) {
+    .header .container {
+        width: 769px;
+    }
+
+    .head-block .resume-block {
+        width: 769px;
+    }
+
+    .body-block .about-myself {
+        width: 769px;
+    }
+
+    .body-block .timelines-block .container-base {
+        max-width: 1000px;
+    }
+
+    .body-block .faq-block .container {
+        width: 769px;
+    }
+
+    .footer-block .container {
+        width: 769px;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .header .container {
+        width: 600px;
+    }
+
+    .head-block .resume-block {
+        width: 600px;
+        align-items: center;
+    }
+
+    .head-block .resume-block .image-block img {
+        width: 200px;
+    }
+
+    .body-block .about-myself {
+        width: 600px;
+    }
+
+    .body-block .timelines-block .container-base {
+        max-width: 620px;
+    }
+
+
+    .body-block .timelines-block .container .timeline {
+        max-width: 300px;
+    }
+
+    .body-block .timelines-block .container .timeline .container {
+        padding: 10px 25px;
+    }
+
+    .body-block .timelines-block .container .timeline .left {
+        left: -50px;
+    }
+
+    .body-block .timelines-block .container .timeline .left::before {
+        right: 18px;
+    }
+
+    .body-block .timelines-block .container .timeline .right::before {
+        left: 18px;
+    }
+
+    .body-block .timelines-block .container .timeline .content {
+        padding: 10px 15px;
+    }
+
+    .body-block .faq-block .container {
+        width: 600px;
+    }
+
+    .footer-block .container {
+        width: 600px;
+    }
+
+    .footer-block .container .column img {
+        width: 22px;
+    }
+
+    .footer-block .container .column .social-medias img {
+        padding-right: 0;
+        width: 28px;
+    }
+}
+
+@media (max-width: 620px) {
+    .header .container {
+        width: 290px;
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .head-block .resume-block {
+        width: 300px;
+        display: inline-block;
+    }
+
+    .head-block .resume-block .image-block {
+        text-align: center;
+    }
+
+    .head-block .resume-block .info-block {
+        padding: 20px;
+        padding-top: 0;
+    }
+
+    .head-block .resume-block .info-block .social-medias {
+        text-align: center;
+    }
+
+    .body-block .about-myself {
+        width: 280px;
+    }
+
+    .body-block .about-myself .container {
+        display: inline-block;
+        margin-top: 0;
+    }
+
+    .body-block .about-myself .container .description {
+        width: 100%;
+    }
+
+    .body-block .about-myself .container .gallery {
+        width: 100%;
+        text-align: center;
+    }
+
+    .body-block .about-myself .container .gallery img {
+        width: 90px;
+    }
+
+    .body-block .timelines-block .buttons-base {
+        display: flex;
+        width: 100%;
+        padding: 50px 0 30px;
+    }
+
+    .body-block .timelines-block .container {
+        display: inline-block;
+    }
+
+    .body-block .timelines-block .container .languages {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+
+    .body-block .timelines-block .container-base {
+        max-width: 300px;
+    }
+
+    .body-block .timelines-block .container .timeline {
+        width: 100%;
+    }
+
+    /* Place the timelime to the left */
+    .body-block .timelines-block .container .timeline::after {
+        left: 44px;
+    }
+
+    /* Full-width containers */
+    .body-block .timelines-block .container .timeline .container {
+        padding-left: 70px;
+        padding-right: 0;
+    }
+
+    /* Make sure that all arrows are pointing leftwards */
+    .body-block .timelines-block .container .timeline .container::before {
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    /* Make sure all circles are at the same spot */
+    .body-block .timelines-block .container .timeline .left::after,
+    .body-block .timelines-block .container .timeline .right::after {
+        left: 15px;
+    }
+
+    /* Make all right containers behave like the left ones */
+    .body-block .timelines-block .container .timeline .left,
+    .body-block .timelines-block .container .timeline .right {
+        left: -27px;
+    }
+
+    .body-block .timelines-block .container .base {
+        width: 100%;
+    }
+
+    .body-block .timelines-block .base ul {
+        padding-bottom: 30px;
+    }
+
+    .body-block .faq-block .container {
+        width: 300px;
+    }
+
+    .footer-block {
+        text-align: center;
+    }
+
+    .footer-block .container {
+        display: inline-block;
+        width: 290px;
+        text-align: left;
+    }
+
+    .footer-block .container .column {
+        margin: 15px 10px;
+    }
+}
