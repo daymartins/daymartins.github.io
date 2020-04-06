@@ -59,15 +59,15 @@
                 animate(document.scrollingElement || document.documentElement, "scrollTop", "", self.pageYOffset, target.offsetTop - 80, 800, true);
             });
 
-            var button = document.getElementById('contact');
-            button.addEventListener('click', function (event) {
-                var target = document.getElementById("blockHome");
-                animate(document.scrollingElement || document.documentElement, "scrollTop", "", self.pageYOffset, target.offsetTop - 100, 800, true);
-            });
-
             var button = document.getElementById('faq');
             button.addEventListener('click', function (event) {
                 var target = document.getElementById("blockFaq");
+                animate(document.scrollingElement || document.documentElement, "scrollTop", "", self.pageYOffset, target.offsetTop - 100, 800, true);
+            });
+
+            var button = document.getElementById('contact');
+            button.addEventListener('click', function (event) {
+                var target = document.getElementById("footerBlock");
                 animate(document.scrollingElement || document.documentElement, "scrollTop", "", self.pageYOffset, target.offsetTop - 100, 800, true);
             });
 
@@ -122,11 +122,11 @@
                 <a id="about">
                     Sobre
                 </a>
-                <a id="contact">
-                    Contato
-                </a>
                 <a id="faq">
                     FAQ
+                </a>
+                <a id="contact">
+                    Contato
                 </a>
             </div>
         </div>
@@ -204,7 +204,7 @@
 
             <div class="description">
                 <p>
-                    Sou Dayane Martins Teixeira e nasci nas pequena Capitólio - Minas Gerais (04/12/94). Hoje moro no
+                    Sou Dayane Martins Teixeira e nasci na pequena Capitólio - Minas Gerais (04/12/94). Hoje moro no
                     interior paulista, em Franca.
                 </p>
                 <p>
@@ -212,12 +212,12 @@
                     novas.
                 </p>
                 <p>
-                    Sou bacharel em Ciência da Computação (Unifran) e pós-graduanda em Analycts e Business Intelligence
+                    Sou bacharel em Ciência da Computação (Unifran) e pós-graduanda em Analytics e Business Intelligence
                     (PUC).
                 </p>
                 <p>
-                    Sou também desenvolvedora de software/promagamadora (desde 2016), atuo e me sinto confortável com o
-                    frontend e backend,
+                    Sou também desenvolvedora de software/promagamadora, atuo e me sinto confortável tanto com
+                    frontend quanto com backend,
                     além de desenvolver aplicações mobile através de webviews. Ou seja, sou quase uma fullstack, exceto
                     pela pouca prática com infraestrutura.
                 </p>
@@ -312,42 +312,10 @@
                         </div>
                         <div class="item">
                             <label>
-                                Javascript
+                                SpringBoot
                             </label>
                             <div class="bar">
-                                <div class="progress" style="width: 50%;"></div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <label>
-                                CSS
-                            </label>
-                            <div class="bar">
-                                <div class="progress" style="width: 90%;"></div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <label>
-                                HTML
-                            </label>
-                            <div class="bar">
-                                <div class="progress" style="width: 90%;"></div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <label>
-                                NodeJS
-                            </label>
-                            <div class="bar">
-                                <div class="progress" style="width: 10%;"></div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <label>
-                                Android
-                            </label>
-                            <div class="bar">
-                                <div class="progress" style="width: 25%;"></div>
+                                <div class="progress" style="width: 40%;"></div>
                             </div>
                         </div>
                         <div class="item">
@@ -360,10 +328,42 @@
                         </div>
                         <div class="item">
                             <label>
-                                SpringBoot
+                                HTML5
                             </label>
                             <div class="bar">
-                                <div class="progress" style="width: 40%;"></div>
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label>
+                                CSS3
+                            </label>
+                            <div class="bar">
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label>
+                                Less
+                            </label>
+                            <div class="bar">
+                                <div class="progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label>
+                                Javascript
+                            </label>
+                            <div class="bar">
+                                <div class="progress" style="width: 50%;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label>
+                                NodeJS
+                            </label>
+                            <div class="bar">
+                                <div class="progress" style="width: 10%;"></div>
                             </div>
                         </div>
                         <div class="item">
@@ -376,6 +376,14 @@
                         </div>
                         <div class="item">
                             <label>
+                                Android
+                            </label>
+                            <div class="bar">
+                                <div class="progress" style="width: 25%;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <label>
                                 Git
                             </label>
                             <div class="bar">
@@ -383,14 +391,6 @@
                             </div>
                         </div>
 
-                        <div class="item">
-                            <label>
-                                Less
-                            </label>
-                            <div class="bar">
-                                <div class="progress" style="width: 85%;"></div>
-                            </div>
-                        </div>
                         <div class="item">
                             <label>
                                 Postgres
@@ -444,7 +444,7 @@
                 <div class="timeline">
                     <div class="container left">
                         <div class="content">
-                            <h2>Agosto de 2013</h2>
+                            <h2>Agosto de 2016</h2>
                             <p>Estágio em desenvolvimento de software na Codebit</p>
                         </div>
                     </div>
@@ -503,17 +503,24 @@
                     <img src="images/seta.png" alt=""/>
                 </a>
                 <div class="answer">
-                    Desenvolvedora de software (web)
+                    Sou desenvolvedora de software (web) desde 2016, quando comecei a estagiar na Codebit, já
+                    trabalhando no projeto da Joycar.
+                    Pouco tempo depois fui efetivada na própria Joycar, que começou a ter como sócios, os sócios da
+                    Codebit.
+                    Ah, o ramo da empresa em que eu trabalho a todo esse tempo, é o de mobilidade corporativa,
+                    com foco na solução de car sharing (compartilhamento de carro).
+                    Além de desenvolvedora, sou também pós-graduanda em Analytic e Business Intelligence, um curso
+                    voltado para área de gestão e DataScience.
                 </div>
             </div>
 
             <div class="item">
                 <a class="question" onclick="showAnswer(this.parentElement)">
-                    Porquê carreira de tecnologia?
+                    Por que carreira de tecnologia?
                     <img src="images/seta.png" alt=""/>
                 </a>
                 <div class="answer">
-                    Por que desde criança, sou apaixonada por tecnologia e como ela pode melhorar a vida das
+                    Porque desde criança, sou apaixonada por tecnologia e como ela pode melhorar a vida das
                     pessoas.
                 </div>
             </div>
@@ -563,7 +570,7 @@
         </div>
     </div>
 </div>
-<div class="footer-block">
+<div class="footer-block" id="footerBlock">
     <div class="container">
         <div class="column">
             <h3><a id="homeRodape">Home</a></h3>
